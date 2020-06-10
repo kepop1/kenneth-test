@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+const PORT = process.env.port || 3000;
+
 app.all("/", (req, res) => {
   res.send(`
   <html>
@@ -9,4 +11,4 @@ app.all("/", (req, res) => {
   `);
 });
 
-app.listen(3000);
+app.listen(PORT);
